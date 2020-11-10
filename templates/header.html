@@ -1,0 +1,114 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Owl -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+    <title>Інжир - Дім Інтер'єру</title>
+</head>
+<body>
+    <!-- Logo -->
+    <nav class="navbar navbar-white bg-white justify-content-center py-4">
+        <a class="navbar-brand" href="#">
+            <img src="{% static "img/logo.png" %}" class="img-fluid" alt="logo" loading="lazy">
+        </a>
+    </nav><!-- Logo END -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white py-1 py-sm-4">
+        <div class="container">
+            <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-center mx-auto text-right">
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#kitchens">КУХНІ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#decor">ДЕКОР</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#soft">М'ЯКІ МЕБЛІ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#landscape">ЛАНДШАФТ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#portfolio">ПОРТФОЛІО</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/blog">БЛОГ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- Navifgation END -->
+    <!-- Hedaer image -->
+    <div class="text-center">
+        <img src="{% static "img/header.png" %}" class="img-fluid header" alt="header image">
+    </div> <!-- Header image END -->
+{% block content %}
+{% endblock %}
+<!-- Footer -->
+    <div class="container-fluid footer">
+        <div class="row text-center">
+                <div class="col-md-3 col-sm-12 pb-5 pb-lg-5 footer__container"><img src="{% static 'img/logo.png' %}" class="img-fluid" alt="bottom logo"></div>
+                <div class="col-md-3 col-sm-4 pb-sm-1 footer__container">
+                    <h5>Контакти</h5>
+                    <p>+38(095)-555-55-55</p>
+                    <p>decor-ingir@ukr.net</p>
+                    <p>ingir_home@ukr.net</p>
+                </div>
+                <div class="col-md-3 col-sm-4 footer__container">
+                    <h5>Де знайти?</h5>
+                    <p>Вул. Горького, 54</p>
+                    <p>м. Суми, Україна, 40000</p>
+                </div>
+                <div class="col-md-3 col-sm-4 footer__container">
+                    <h5>Соцмережі</h5>
+                    <p><a href="">Instagram</a></p>
+                    <p><a href="">Facebook</a></p>
+                    <p><a href="">Behance</a></p>
+                </div>
+
+            <div class="col-12">
+                <div class="footer-copyright text-center">© 2020 Copyright:
+                    <a href="https://t.me/woododo">woododo</a>
+                  </div>
+            </div>
+        </div>
+    </div><!-- Footer END -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+{#    Slick  #}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{% static 'slick/slick.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/owl_settings.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/fancy_settings.js' %}" type="text/javascript"></script>
+    <script>
+        $('.navbar-collapse a:not(.dropdown-toggle)').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
+</body>
+</html>
