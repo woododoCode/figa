@@ -1,18 +1,61 @@
-{% extends "blog/base.html" %}
+{% extends "base.html" %}
+{% load static %}
+{% block header %}
+
+{% endblock %}
+{% block navigation %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white py-1 py-sm-4">
+        <div class="container-fluid">
+            <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-center mx-auto text-right">
+                    <li class="nav-item mr-5">
+                        <a class="navbar-brand" href="/">
+                            <img src="{% static "img/logo.png" %}" class="img-fluid nav-logo" alt="logo" loading="lazy">
+                        </a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/#kitchens">КУХНІ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/#decor">ДЕКОР</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/#soft">М'ЯКІ МЕБЛІ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/#landscape">ЛАНДШАФТ</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/#portfolio">ПОРТФОЛІО</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="/blog">БЛОГ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- Navifgation END -->
+{% endblock %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
+    <div class="container my-5">
     <h1>{{ post.title }}</h1>
-    <img src="{{post.image.url }}" alt="{{ post.title }}">
-    <p class="date">Published {{ post.publish }}</p>
+    <img src="{{post.image.url }}"  class="img-fluid mb-4 " alt="{{ post.title }}">
+    <p class="date text-muted">Опубліковано {{ post.publish }}</p>
     {{ post.body|linebreaks }}
-    <h2>Similar posts</h2>
+    <h2 class="mt-5">Схожі дописи:</h2>
       {% for post in similar_posts %}
         <p>
           <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
         </p>
       {% empty %}
-        There are no similar posts yet.
+        Схожі дописи поки що не знайдено.
       {% endfor %}
+    </div>
 {% endblock %}

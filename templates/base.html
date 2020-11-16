@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -11,9 +12,6 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Owl -->
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}">
@@ -22,13 +20,14 @@
     <title>Інжир - Дім Інтер'єру</title>
 </head>
 <body>
+{% block navigation %}
     <!-- Logo -->
     <nav class="navbar navbar-white bg-white justify-content-center py-4">
         <a class="navbar-brand" href="#">
             <img src="{% static "img/logo.png" %}" class="img-fluid" alt="logo" loading="lazy">
         </a>
     </nav><!-- Logo END -->
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white py-1 py-sm-4">
         <div class="container">
             <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,10 +57,14 @@
             </div>
         </div>
     </nav> <!-- Navifgation END -->
-    <!-- Hedaer image -->
-    <div class="text-center">
-        <img src="{% static "img/header.png" %}" class="img-fluid header" alt="header image">
-    </div> <!-- Header image END -->
+    {% endblock %}
+
+    {% block header %}
+         <!-- Hedaer image -->
+        <div class="text-center">
+            <img src="{% static "img/header.png" %}" class="img-fluid header" alt="header image">
+        </div> <!-- Header image END -->
+    {% endblock %}
 {% block content %}
 {% endblock %}
 <!-- Footer -->
@@ -70,23 +73,27 @@
                 <div class="col-md-3 col-sm-12 pb-5 pb-lg-5 footer__container"><img src="{% static 'img/logo.png' %}" class="img-fluid" alt="bottom logo"></div>
                 <div class="col-md-3 col-sm-4 pb-sm-1 footer__container">
                     <h5>Контакти</h5>
-                    <p>+38(095)-555-55-55</p>
+                    <p>+38(098)-67-93-210</p>
+                    <p>+38(095)-60-60-133</p>
+                    <p>+38(066)-88-10-545</p>
+                    <p>+38(066)-008-10-99</p>
                     <p>decor-ingir@ukr.net</p>
                     <p>ingir_home@ukr.net</p>
                 </div>
                 <div class="col-md-3 col-sm-4 footer__container">
                     <h5>Де знайти?</h5>
                     <p>Вул. Горького, 54</p>
-                    <p>м. Суми, Україна, 40000</p>
+                    <p>м. Суми, Україна, 40004</p>
                 </div>
                 <div class="col-md-3 col-sm-4 footer__container">
                     <h5>Соцмережі</h5>
-                    <p><a href="">Instagram</a></p>
-                    <p><a href="">Facebook</a></p>
-                    <p><a href="">Behance</a></p>
+                    <p><a href="https://www.instagram.com/decor.ingir/">Декор - Instagram</a></p>
+                    <p><a href="https://www.facebook.com/decor.ingir/">Декор - Facebook</a></p>
+                    <p><a href="https://www.instagram.com/ingir.home/">Шоу-рум - Instagram</a></p>
+                    <p><a href="https://www.facebook.com/ingir.home/">Шоу-рум - Facebook</a></p>
                 </div>
 
-            <div class="col-12">
+            <div class="col-12 d-none">
                 <div class="footer-copyright text-center">© 2020 Copyright:
                     <a href="https://t.me/woododo">woododo</a>
                   </div>

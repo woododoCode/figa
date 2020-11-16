@@ -61,7 +61,20 @@ body {
   color: #afafaf!important;
   font-size: 1em!important;
 }
+.nav-logo {
+  max-height: 50px;
+}
+.nav-link {
+  padding-top: 20px;
+}
+.card:hover {
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(48,19,74,1);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(48,19,74,1);
+  box-shadow: 0px 0px 15px 1px rgba(48,19,74,1);
+  border: 1px solid rgba(48,19,74,0.5);
+  transition: 0.2s;
 
+}
 @media (max-width: 1024px) {
   .slick-slide {
     margin: 0 10px;
